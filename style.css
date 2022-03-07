@@ -1,0 +1,132 @@
+@@ -12,7 +12,11 @@ header {
+
+}
+:root {
+    --primary-color: #38fcbb;
+    --secondary-color: rgb(19, 18, 19);
+}
+
+.button1 {
+  color: rgb(15, 14, 14);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  justify-content: flex-start;
+  float: inline-start;
+  vertical-align: auto;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+#scoreDisplay {
+  
+  float: left;
+  color: var(--primary-color);
+}
+#scoreDisplay:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+#timerDisplay {
+  color: var(--primary-color);
+  float: right;
+  }
+#timerDisplay:hover
+{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: auto;
+    border-radius: 15px;
+
+    height: 40px;
+    font-size: larger;
+
+}
+#high_scores_page {
+  border-radius: 15px;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+.container {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+@media (max-width: 768px) {
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    background-color: white;
+  }
+  
+  header {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+   color: var(--primary-color);
+   
+  }
+  
+  
+  body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+  
+  #scoreDisplay {
+    
+    float: left;
+    color: var(--primary-color);
+  }
+  
+  #scoreDisplay:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  #timerDisplay {
+    color: var(--primary-color);
+    float: right;
+    }
+  
+  #timerDisplay:hover
+  {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  button {
+      background-color:var(--primary-color);
+      color: white;
+      width: auto;
+      border-radius: 15px;
+      height: 40px;
+      font-size: larger;
+      float: left;
+  }
+  #high_scores_page {
+    border-radius: 15px;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-size: 2rem;
+  }
+  .container {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+  }
+}
+#submitName {
+background-color:var(--primary-color)
+var(--primary-color)
+
+  
