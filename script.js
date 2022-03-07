@@ -19,7 +19,7 @@
     var score = 0;
     let i = 0;
 
-// QUESTIONS ARRAY:
+//Questions:
 
 var questionsArray = [
 {
@@ -55,8 +55,6 @@ var questionsArray = [
 //timer.
 
 var countdownTimerInterval = setInterval(setCountdownTimer, 1000);
-
-//function that changes the time var
 function setCountdownTimer() {
         if (time_start)
         time--;
@@ -67,8 +65,7 @@ function setCountdownTimer() {
         }
         document.getElementById("timer").innerHTML = time;
     }
-
-// 
+ 
 startBtn.addEventListener("click", function() {
     quizContainer.style.display = "block";
     homeContainer.style.display ="none";
@@ -80,7 +77,7 @@ startBtn.addEventListener("click", function() {
     time_start= true;
 });
 
-// QUESTIONS FUNCTION: display questions and multiple-choice answers
+//Questions
 
 function setQuizQuestions() {
         questionHeading.textContent = questionsArray[i].question;
@@ -90,9 +87,6 @@ function setQuizQuestions() {
         answerChoiceD.textContent = questionsArray[i].answerChoice[3]; 
         };
 
-// When user answers a question: then user is presented with another question
-
-// Store user answer choices. Clear elements and update score count.
 
 // Change to next question
 answerChoiceA.addEventListener('click', function(event) {
@@ -100,6 +94,7 @@ answerChoiceA.addEventListener('click', function(event) {
         correctAnswer= questionsArray[i].correctAnswer;
         console.log("correctAnswer " + correctAnswer);
         // check answer
+
         if (0 === correctAnswer) { 
             // display message to user for 1  second stating if the answer is correct or incorrect
             document.getElementById("AnswerResponse").innerHTML = "Correct!";
@@ -112,9 +107,9 @@ answerChoiceA.addEventListener('click', function(event) {
             score++;    
         
             document.getElementById("score").innerHTML = score;
-        } else {
+        } else {// subtract 5 off time for wrong answer
             time -= 5;
-            // when user answers a question inccorrectly, subtract from the time
+            
             document.getElementById("AnswerResponse").innerHTML = "Wrong Answer!";
             setTimeout(function() {
                 document.getElementById("AnswerResponse").innerHTML = "";
@@ -230,18 +225,14 @@ answerChoiceD.addEventListener('click', function(event) {
             document.getElementById("end_score").innerHTML= score;
             }
 
-        //submit score and initals
+        //submit score and name
             function submit_score() {
              high_scores.push(document.getElementById("name").value + score);
              view_high_scores();
-            }
-
-        // localStorage.setItem("score",JSON.stringify(AnswerResponse));
-        // localStorage.setItem("initials", JSON.stringify(initials));
+            };
         
         function view_high_scores(){
         
-        // changing the screen output
         
             document.getElementById("quizContainer").style.display="none";
             document.getElementById("game_over").style.display= "none";
@@ -255,7 +246,7 @@ answerChoiceD.addEventListener('click', function(event) {
              clear_up();
         }
 
-        // refresh the site to the home container page
+        // refresh the site
         function go_home(){	
                 document.getElementById("high_scores_page").style.display= "none";
                 document.getElementById("homeContainer").style.display= "block";
@@ -265,7 +256,6 @@ answerChoiceD.addEventListener('click', function(event) {
         // clear the highscore
         function clear_hs(){
             high_scores = [];
-            // high_scores.splice(0, high_scores.length);
           }
         
         // refresh the site 
