@@ -29,13 +29,13 @@ var questionsArray = [
     correctAnswer: 2
 }, 
 {
-    question: "The condition statement if/else is enclosed with the following",
+    question: "The condition statement if/else is enclosed with _____.",
     imageSrc: "",
     answerChoice: ["1.Parentheses", "2.Curly Brackets", "3.Quotes", "4.Square Brackets"],
     correctAnswer: 0
 },
 {
-    question: "Arrays in JavaScript can be used to store",
+    question: "Arrays in JavaScript can be used to store _____.",
     imageSrc: "",
     answerChoice: ["1.Number of strings", "2.Other Arrays", "3.All of the above", "4.Booleans"],
     correctAnswer: 2
@@ -47,7 +47,7 @@ var questionsArray = [
     correctAnswer: 2
 },
 {
-    question: "Strings must be enclosed with",
+    question: "Strings must be enclosed within ______ when being assigned to variables.",
     answerChoice: ["1.Parentheses", "2.Curly Brackets", "3.Quotes", "4.Commas"],
     correctAnswer: 1
 }];
@@ -256,8 +256,9 @@ answerChoiceD.addEventListener('click', function(event) {
         // clear the highscore
         function clear_hs(){
             high_scores = [];
+            clear_up();
           }
-        
+
         // refresh the site 
         function clear_up(){
         
